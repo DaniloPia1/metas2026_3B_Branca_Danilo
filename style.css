@@ -8,3 +8,9 @@
     --botao-inativo: #804FFF;
     --texto-fundo: #000000;
 }
+
+body {
+    background-color: var(--cor-de-fundo);
+    color: var(--branco);
+    font-family: 'Times New Roman', Times, serif;
+}
