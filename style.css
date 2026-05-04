@@ -12,7 +12,7 @@
 body {
     background-color: var(--cor-de-fundo);
     color: var(--branco);
-    font-family: 'Times New Roman', Times, serif;
+    font-family:'Times New Roman', Times, serif;
 }
 
 .conteudo-principal {
@@ -29,8 +29,9 @@ body {
     width: 100%;
     font-size: 32px;
 }
+
 .botao{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     background-color: var(--botao-inativo);
     color: var(--branco);
     display: flex;
@@ -45,7 +46,6 @@ body {
     border-top: none;
 }
 
-
 .botao:first-child{
     border-radius: 40px 40px 0 0;
 }
@@ -59,20 +59,19 @@ body {
     border-color: 4px solid var(--grifar);
 }
 
-.abas-texto{
+.abas-textos{
     background-color: var(--texto-fundo);
     padding: 40px;
     border-radius: 0 0 40px 40px;
 }
 
-.aba-conteudo.botao.ativo{
+.aba-conteudo.ativo{
     display: block;
 }
 
 .aba-conteudo{
     display: none;
 }
-
 
 .aba-conteudo-titulo-principal{
     font-size: 28px;
@@ -102,14 +101,15 @@ body {
     margin: 0;
 }
 
-@media screen and (min-width): 768px){
+@media screen and (min-width: 768px) {
     .botao{
         display: flex;
     }
     .botao:first-child{
         border-radius: 40px 0 0;
     }
-    .botao:last-child{
-        border-radius: 0 40px 0 0;
+    .border:last-child{
+    border-radius: 0 40px 0 0;
     }
+    
 }
