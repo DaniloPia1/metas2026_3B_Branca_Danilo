@@ -59,7 +59,7 @@ body {
     border-color: 4px solid var(--grifar);
 }
 
-.abas.texto{
+.abas-texto{
     background-color: var(--texto-fundo);
     padding: 40px;
     border-radius: 0 0 40px 40px;
