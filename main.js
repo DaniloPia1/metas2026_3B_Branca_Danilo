@@ -3,19 +3,16 @@ const textos = document.querySelectorAll(".aba-conteudo");
 
 for (let i = 0; i < botoes.length; i++){
     botoes[i].onclick = function (){
-        // Corrigido o 'let j = 0'
         for (let j = 0; j < botoes.length; j++){
             botoes[j].classList.remove("ativo");
             textos[j].classList.remove("ativo");
         }
-        // Usando o índice 'i' do botão clicado para ativar
         botoes[i].classList.add("ativo");
         textos[i].classList.add("ativo");
     }
 }
 
-// Corrigido o querySelectorAll
-const contadores = document.querySelectorAll(".contador");
+// Lógica do Cronômetro
 const tempoObjetivo1 = new Date("2028-01-01T00:00:00");
 const tempoObjetivo2 = new Date("2027-05-28T00:00:00");
 const tempoObjetivo3 = new Date("2027-02-23T00:00:00");
@@ -37,16 +34,19 @@ function atualizaCronometro(){
         minutos %= 60;
         horas %= 24;
 
-        if (tempoFinal > 0){
-            document.getElementById(`dias${i}`).textContent = dias;
-            document.getElementById(`horas${i}`).textContent = horas;
-            document.getElementById(`min${i}`).textContent = minutos;
-            document.getElementById(`seg${i}`).textContent = segundos;
-        } else {
-            document.getElementById(`dias${i}`).textContent = "0";
-            document.getElementById(`horas${i}`).textContent = "0";
-            document.getElementById(`min${i}`).textContent = "0";
-            document.getElementById(`seg${i}`).textContent = "0";
+        // Verifica se os elementos realmente existem na tela antes de atualizar
+        if(document.getElementById(`dias${i}`)){
+            if (tempoFinal > 0){
+                document.getElementById(`dias${i}`).textContent = dias;
+                document.getElementById(`horas${i}`).textContent = horas;
+                document.getElementById(`min${i}`).textContent = minutos;
+                document.getElementById(`seg${i}`).textContent = segundos;
+            } else {
+                document.getElementById(`dias${i}`).textContent = "0";
+                document.getElementById(`horas${i}`).textContent = "0";
+                document.getElementById(`min${i}`).textContent = "0";
+                document.getElementById(`seg${i}`).textContent = "0";
+            }
         }
     }
 }
